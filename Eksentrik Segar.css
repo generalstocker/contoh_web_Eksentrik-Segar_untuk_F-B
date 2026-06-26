@@ -1,0 +1,351 @@
+/* PALET WARNA LUXURY COFFEE DARK */
+:root {
+    --bg-main: #0c0908;       /* Hitam kopi pekat */
+    --bg-card: #14100e;       /* Cokelat sangat gelap */
+    --primary: #c69b7b;       /* Warna krem emas kopi */
+    --primary-hover: #e3b796; /* Krem terang */
+    --text-bright: #f3eae3;   /* Putih susu hangat */
+    --text-muted: #9c8e85;    /* Abu-abu hangat */
+    --border: rgba(198, 155, 123, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Menggunakan link langsung dari foto desa pegunungan pilihan Anda */
+    background: linear-gradient(rgba(244, 247, 245, 0.82), rgba(244, 247, 245, 0.92)),
+                url('https://github.com/generalstocker/image/blob/e3eb67f9ecd6df082cc64b4acffd8543ddd4c873/penggunungan.jpg?raw=true') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Efek Parallax: Background diam estetis saat di-scroll */
+    color: var(--text-bright);
+}
+
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(12, 9, 8, 0.85);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.btn-nav-wa {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-nav-wa:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: transparent; /* Membuat background urat kayu tembus ke area utama */
+}
+.badge {
+    background: rgba(198, 155, 123, 0.1);
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--border);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: #0c0908;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(198, 155, 123, 0.3);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* MENU SECTION */
+.menu-container {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+/* Tab Filter Kategori */
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-bright);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--primary);
+    color: #000;
+    border-color: var(--primary);
+}
+
+/* Grid Menu */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.menu-card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border-color: rgba(198, 155, 123, 0.4);
+}
+
+.card-thumb {
+    height: 120px;
+    background: linear-gradient(135deg, #231b17, #14100e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.card-body .desc {
+    color: var(--text-muted);
+    font-size: 13px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.price {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.btn-order {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-order:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+/* LOKASI & JAM OPERASIONAL */
+.info-container {
+    padding: 60px 8%;
+    background: #100d0c;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.info-box h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.time-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.time-row span {
+    color: var(--text-muted);
+}
+
+.map-responsive {
+    margin-top: 15px;
+    overflow: hidden;
+    border-radius: 12px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border: 1px solid var(--border);
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--bg-main);
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+footer p:last-child {
+    margin-top: 5px;
+    color: rgba(198, 155, 123, 0.5);
+}
+
+/* ===================================================
+   RESPONSIVE MEDIA QUERY (Sempurna di Layar HP)
+   =================================================== */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    nav {
+        display: none; /* Menyembunyikan menu teks biasa di HP agar ringkas */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .menu-container {
+        padding: 50px 5%;
+    }
+
+    .info-container {
+        padding: 50px 5%;
+    }
+}

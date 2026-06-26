@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi Selasar - Menu & Kontak QR</title>
+    <link rel="stylesheet" href="Eksentrik Segar.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="logo">Kopi<span>Selasar</span></div>
+        <nav>
+            <a href="#hero">Beranda</a>
+            <a href="#menu-section">Menu</a>
+            <a href="#info-section">Lokasi & Jam</a>
+        </nav>
+        <a href="https://wa.me/6281234567890" target="_blank" class="btn-nav-wa">Hubungi Kami</a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <span class="badge">Premium Coffee & Space</span>
+            <h1>Temukan Rasa Kopi Terbaik di Selasar Kota</h1>
+            <p>Dibuat dengan biji kopi pilihan lokal berkualitas tinggi. Scan menu, pesan lewat WhatsApp, dan nikmati harimu.</p>
+            <a href="#menu-section" class="btn-primary">Lihat Menu Sekarang</a>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu-section" class="menu-container">
+        <div class="section-title">
+            <h2>Daftar Menu Favorit</h2>
+            <p>Pilih menu kesukaanmu dan pesan langsung ke barista kami</p>
+        </div>
+
+        <!-- Filter Kategori Kopi -->
+        <div class="category-tabs">
+            <button class="tab-btn active" onclick="filterMenu('all')">Semua</button>
+            <button class="tab-btn" onclick="filterMenu('coffee')">Coffee</button>
+            <button class="tab-btn" onclick="filterMenu('non-coffee')">Non-Coffee</button>
+            <button class="tab-btn" onclick="filterMenu('snack')">Cemilan</button>
+        </div>
+
+        <!-- Grid Item Menu -->
+        <div class="menu-grid">
+            <!-- Item 1 (Coffee) -->
+            <div class="menu-card" data-category="coffee">
+                <div class="card-thumb">☕</div>
+                <div class="card-body">
+                    <h3>Es Kopi Susu Selasar</h3>
+                    <p class="desc">Kopi espresso ganda dengan susu segar dan sirup gula aren rahasia.</p>
+                    <div class="card-footer">
+                        <span class="price">Rp 18.000</span>
+                        <button class="btn-order" onclick="pesanKopi('Es Kopi Susu Selasar', 'Rp 18.000')">Pesan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 (Coffee) -->
+            <div class="menu-card" data-category="coffee">
+                <div class="card-thumb">☕</div>
+                <div class="card-body">
+                    <h3>Americano (Ice/Hot)</h3>
+                    <p class="desc">Ekstraksi espresso murni dengan air mineral berkualitas tinggi.</p>
+                    <div class="card-footer">
+                        <span class="price">Rp 15.000</span>
+                        <button class="btn-order" onclick="pesanKopi('Americano', 'Rp 15.000')">Pesan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 (Non-Coffee) -->
+            <div class="menu-card" data-category="non-coffee">
+                <div class="card-thumb">🍵</div>
+                <div class="card-body">
+                    <h3>Matcha Latte Premium</h3>
+                    <p class="desc">Bubuk matcha asli Jepang yang dipadukan dengan gurihnya susu segar.</p>
+                    <div class="card-footer">
+                        <span class="price">Rp 22.000</span>
+                        <button class="btn-order" onclick="pesanKopi('Matcha Latte Premium', 'Rp 22.000')">Pesan</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 4 (Snack) -->
+            <div class="menu-card" data-category="snack">
+                <div class="card-thumb">🥐</div>
+                <div class="card-body">
+                    <h3>Croissant Cokelat</h3>
+                    <p class="desc">Pastry renyah dengan isian cokelat lumer premium khas Prancis.</p>
+                    <div class="card-footer">
+                        <span class="price">Rp 20.000</span>
+                        <button class="btn-order" onclick="pesanKopi('Croissant Cokelat', 'Rp 20.000')">Pesan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFO LOKASI & JAM OPERASIONAL -->
+    <section id="info-section" class="info-container">
+        <div class="info-grid">
+            <!-- Jam Buka -->
+            <div class="info-box">
+                <h3>🕒 Jam Operasional</h3>
+                <div class="time-row">
+                    <span>Senin - Jumat</span>
+                    <span>10:00 - 22:00 WIB</span>
+                </div>
+                <div class="time-row">
+                    <span>Sabtu - Minggu</span>
+                    <span>09:00 - 23:00 WIB</span>
+                </div>
+            </div>
+
+            <!-- Alamat -->
+            <div class="info-box">
+                <h3>📍 Lokasi Kedai</h3>
+                <p>Jl. Selasar Indah No. 45, Pusat Kota (Samping Gedung Agung)</p>
+                <!-- Embed Google Maps Fleksibel -->
+                <div class="map-responsive">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81956135000001!3d-6.194561299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTEnNDAuNCJTIDEwNocksTknMTAuNCJF!5e0!3m2!1sid!2sid!4v1650000000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Kopi Selasar. Hak Cipta Dilindungi.</p>
+        <p>Powered by @generalstocker Web Service</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
